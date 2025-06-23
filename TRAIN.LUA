@@ -1,2 +1,10 @@
 local c = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
-for _,m in ipairs(game:GetDescendants()) do if m:IsA("Model") and m.Name=="ConductorSeat" then local s=m:FindFirstChildWhichIsA("VehicleSeat",true) if s then c:MoveTo(s.Position) break end end end
+for _, m in ipairs(workspace:GetDescendants()) do
+    if m:IsA("Model") and m.Name == "ConductorSeat" then
+        local s = m:FindFirstChildWhichIsA("VehicleSeat", true)
+        if s then
+            c:MoveTo(s.Position)
+            break
+        end
+    end
+end
